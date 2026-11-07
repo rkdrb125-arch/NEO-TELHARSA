@@ -788,7 +788,55 @@ body.ui-idle:not(.ui-drawer-open) .next{opacity:.78}
  #neoOp .op-captions{max-width:calc(100% - 20px);box-sizing:border-box}
 }
 @media(prefers-reduced-motion:reduce){#neoOp .op64-compositor,#neoOp .op64-image{will-change:auto;animation:none!important;transition:none!important}}
-</style></head><body><div class="app"><header class="top"><div><div class="brand">NEO-TELHARSA</div><div class="sub">NEON NOIR · STORY FRAMEWORK v0.61 · SILENT PARADISE OP</div></div><div class="toolbar" id="mainTools"><button id="save">저장</button><button id="load">저장 슬롯</button><button id="history">대화 기록</button><button id="preferences">환경설정 ⚙</button><button id="controlsHelp" type="button" aria-label="조작법 안내">조작법 ?</button><button id="reset">초기화</button></div></header>
+
+/* v0.67: background-safe mobile crop, actor foreground, and independent OP image depths. */
+.scene-visual{isolation:isolate;overflow:hidden}
+.scene-visual>.sky{overflow:hidden;contain:paint}
+.scene-visual .scene-art{background-repeat:no-repeat;background-size:cover;background-position:var(--v067-scene-focus,50% 50%);transform-origin:var(--v067-scene-focus,50% 50%);transform:translate3d(var(--v067-pan-x,0px),var(--v067-pan-y,0px),0) scale(var(--v067-scene-zoom,1.025));transition:opacity .42s ease,transform 1.25s cubic-bezier(.2,.7,.2,1),background-position .55s ease;will-change:transform}
+.scene-visual .scene-art:not(.has-art){opacity:0}
+.scene-visual .scene-art.has-art{opacity:1}
+.scene-visual>.actor-stage{z-index:3!important;isolation:isolate;transform:none!important;filter:none!important}
+.scene-visual .actor-figure{z-index:4!important;transform-origin:center bottom}
+.scene-visual .actor-figure.is-present{transform:translateX(0) scale(1)}
+.scene-visual::after{z-index:2!important;pointer-events:none}
+.stage>.story{z-index:7!important}
+#neoOp .op64-compositor{transform:none;contain:layout paint;isolation:isolate}
+#neoOp .op64-image{transition:opacity .44s ease,filter .44s ease;backface-visibility:hidden;will-change:transform,opacity}
+#neoOp .op64-background{transform-origin:var(--op64-focus-x,50%) var(--op64-focus-y,50%);transform:translate3d(var(--v067-bg-x,0px),var(--v067-bg-y,0px),0) scale(var(--v067-bg-zoom,1.06));z-index:0}
+#neoOp .op64-character{z-index:2;transform-origin:50% 85%;transform:translate3d(var(--v067-char-x,0px),var(--v067-char-y,0px),0) scale(var(--v067-char-zoom,1));object-position:center bottom}
+#neoOp .op64-overlay{z-index:3;transform:translate3d(var(--v067-fx-x,0px),var(--v067-fx-y,0px),0) scale(var(--v067-fx-zoom,1.05));mix-blend-mode:screen}
+#neoOp .op-shot.is-active .op64-compositor{opacity:1}
+@media(max-width:650px){
+ .scene-visual{height:clamp(245px,66vw,355px)!important}
+ .scene-visual .scene-art{background-position:var(--v067-scene-mobile-focus,var(--v067-scene-focus,50% 50%))}
+ .scene-visual .actor-figure{height:min(90%,285px);max-width:45vw}
+ .scene-visual .actor-figure[data-side=left]{left:3%}
+ .scene-visual .actor-figure[data-side=right]{right:3%}
+ #neoOp .op64-background{object-position:var(--v067-op-mobile-focus,50%) 50%}
+ #neoOp .op64-character{object-fit:contain;object-position:center bottom}
+ #neoOp .op64-overlay{object-fit:cover}
+ #neoOp .op-captions{left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));width:auto;max-width:none}
+}
+@media(prefers-reduced-motion:reduce){.scene-visual .scene-art,#neoOp .op64-image{transform:none!important;transition:none!important;will-change:auto!important}}
+
+/* v0.67.1: stable reading HUD */
+.stage:not(.scene-changing) .scene-wipe{opacity:0!important;pointer-events:none!important}
+.story .speaker,.choices{animation:none!important}
+
+/* v0.68: per-cut cinematic art direction; never affects main story reader. */
+#neoOp .op-stage{isolation:isolate}
+#neoOp .op-shot.is-active .op64-background{filter:saturate(1.12) contrast(1.06)}
+#neoOp .op-shot.is-active .op64-compositor::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;background:linear-gradient(115deg,transparent 20%,color-mix(in srgb,var(--op68-cut-accent,#a4d7ff) 13%,transparent) 48%,transparent 78%);opacity:.45;mix-blend-mode:screen;animation:op68Sweep 8s ease-in-out infinite alternate}
+#neoOp[data-cut-index="2"] .op-ad,#neoOp[data-cut-index="8"] .op-ad{filter:drop-shadow(0 0 18px #43e5fa);animation:op68Holo 3.1s steps(1,end) infinite}
+#neoOp[data-cut-index="3"] .op-person,#neoOp[data-cut-index="10"] .op-person{filter:drop-shadow(-9px 0 14px #af78f9);transform-origin:50% 85%}
+#neoOp[data-cut-index="4"] .op-case,#neoOp[data-cut-index="9"] .op-case{filter:drop-shadow(0 0 12px #3cddfa)}
+#neoOp[data-cut-index="5"] .op-title-card,#neoOp[data-cut-index="11"] .op-title-card,#neoOp[data-cut-index="16"] .op-title-card{text-shadow:0 0 18px var(--op68-cut-accent,#9bf),0 0 42px #8863de}
+#neoOp[data-cut-index="14"] .op-shards,#neoOp[data-cut-index="18"] .op-shards{filter:blur(.3px) drop-shadow(0 0 12px #ad86fb)}
+#neoOp[data-cut-index="19"] .op-last-signal{filter:drop-shadow(0 0 18px #a9e8f9)}
+@keyframes op68Sweep{from{transform:translateX(-22%);opacity:.2}to{transform:translateX(22%);opacity:.65}}
+@keyframes op68Holo{0%,92%,100%{opacity:1}93%{opacity:.7}95%{opacity:.95}97%{opacity:.78}}
+@media(prefers-reduced-motion:reduce){#neoOp .op-shot.is-active .op64-compositor::after,#neoOp .op-ad{animation:none!important}}
+</style></head><body><div class="app"><header class="top"><div><div class="brand">NEO-TELHARSA</div><div class="sub">NEON NOIR · STORY FRAMEWORK v0.61 · SILENT PARADISE OP</div></div><div class="toolbar" id="mainTools"><button id="save">저장</button><button id="load">저장 슬롯</button><button id="history">대화 기록</button><button id="preferences">환경설정 ⚙</button><button id="controlsHelp" type="button" aria-label="조작법 안내">조작법 ?</button><button id="openNeoOpMenu" type="button">♫ OP</button><button id="reset">초기화</button></div></header>
 <button id="uiMenuToggle" class="ui-menu-toggle" type="button" aria-controls="uiDrawer" aria-expanded="false" aria-label="게임 메뉴 열기">☰ <span>메뉴</span></button>
 <div class="ui-backdrop" id="uiBackdrop" hidden></div>
 <div class="ui-drawer" id="uiDrawer" aria-label="게임 메뉴" aria-hidden="true"><div class="ui-drawer-heading"><strong>NEO-TELHARSA</strong><button id="uiMenuClose" type="button" aria-label="메뉴 닫기">✕</button></div><div id="uiDrawerTools"></div><div id="uiDrawerNavigation"></div></div>
@@ -807,7 +855,7 @@ body.ui-idle:not(.ui-drawer-open) .next{opacity:.78}
       <div class="title-korean">네오-델하르사</div>
       <div class="title-rule" aria-hidden="true"></div>
       <p class="title-copy">비가 내리는 도시.<br>모든 기록이 진실을 말하지는 않는다.</p>
-      <div class="title-actions"><button id="start" class="title-primary" type="button">새 게임 시작 <span aria-hidden="true">↗</span></button><button id="resume" type="button">이어하기 · 저장 슬롯</button></div>
+      <div class="title-actions"><button id="start" class="title-primary" type="button">새 게임 시작 <span aria-hidden="true">↗</span></button><button id="resume" type="button">이어하기 · 저장 슬롯</button><button id="openNeoOp" type="button" style="border-color:#b369e5;color:#eecaff">♫ SILENT PARADISE · 오프닝 감상</button></div>
       <div class="title-tools"><button id="titlePreferences" type="button">⚙ 환경설정</button><button id="titleControls" type="button">? 조작법</button></div>
       <div class="title-footer"><span>CHAPTER TITLES LOCKED UNTIL DISCOVERED</span><span>v0.20 · LOCAL SAVE</span></div>
     </div>
@@ -1315,10 +1363,12 @@ function renderDirection(scene){
   $("cameraLabel").textContent=CAMERA_LABELS[cue.camera];
   $("toneLabel").textContent=TONE_LABELS[cue.tone];
   for(const side of ["Left","Right"])$("actor"+side).dataset.tone=cue.tone;
-  if(lastCameraScene!==state.scene){
+  // A camera animation is meaningful only when the framing changes.
+  const cameraSignature=cue.camera+"|"+cue.tone;
+  if(lastCameraScene!==cameraSignature){
     stage.classList.remove("is-camera-cut");
     if(!reducedMotion()){void stage.offsetWidth;stage.classList.add("is-camera-cut");}
-    lastCameraScene=state.scene;
+    lastCameraScene=cameraSignature;
   }
 }
 
@@ -1351,7 +1401,15 @@ function v054SceneBackground(scene){
 function v054ApplyBackground(scene){
  const art=document.getElementById('sceneArt');if(!art)return;
  const key=v054SceneBackground(scene),file=V054_BG_FILES[key];
- if(v054LastBackgroundKey===key&&art.classList.contains('has-art'))return;v054LastBackgroundKey=key;
+ const v067Focus={"city-night":"50% 46%","xero-square":"53% 42%","dawn-crime-scene":"49% 62%","slum-alley":"50% 52%","covered-alley":"50% 53%","abandoned-house":"50% 52%","house-door":"50% 50%","rainy-house-exterior":"50% 54%"};
+ const v067MobileFocus={"city-night":"54% 48%","xero-square":"53% 45%","dawn-crime-scene":"50% 65%","slum-alley":"52% 53%","covered-alley":"50% 55%","abandoned-house":"50% 53%","house-door":"50% 50%","rainy-house-exterior":"50% 53%"};
+ if(v054LastBackgroundKey===key)return;
+ art.style.setProperty('--v067-scene-focus',v067Focus[key]||'50% 50%');
+ art.style.setProperty('--v067-scene-mobile-focus',v067MobileFocus[key]||'50% 50%');
+ art.style.setProperty('--v067-scene-zoom','1.025');
+ art.style.setProperty('--v067-pan-x','0px');art.style.setProperty('--v067-pan-y','0px');
+
+ if(v054LastBackgroundKey===key)return;v054LastBackgroundKey=key;
  const token=++v054BgRequest;
  art.dataset.background=key;
  art.classList.remove('has-art');art.style.backgroundImage='none';
@@ -1611,7 +1669,13 @@ function goto(id){
   if(autoTimer!==null){clearTimeout(autoTimer);autoTimer=null;}
   clearActorTimer();
   cancelDialogue();dialogueComplete=true;
-  playSceneTransition(()=>commitScene(id));
+  // v0.67.1: Keep the entire scene mounted during ordinary dialogue advances.
+  // A visual wipe is reserved for a real location/chapter change only.
+  const from=scenes[state.scene];
+  const to=scenes[id];
+  const locationChanged=!from || from.ch!==to.ch || v054SceneBackground(from)!==v054SceneBackground(to);
+  if(locationChanged)playSceneTransition(()=>commitScene(id));
+  else {clearTransition();commitScene(id);}
 }
 function commitScene(id){
   const previous=chapterIndex();
@@ -2137,7 +2201,8 @@ render();syncMobileDock();beginDialogue(scenes[state.scene].text);
  revealControls();
 })();
 
-
+;
+</script><div id="investigateResult" class="hidden" role="dialog" aria-modal="true" aria-labelledby="investigateResultTitle"><div class="investigate-result-card"><div class="result-tag" id="investigateResultTag"></div><h3 id="investigateResultTitle"></h3><p id="investigateResultText"></p><button type="button" id="investigateResultClose">수사 계속하기</button></div></div><div id="neoOp" role="dialog" aria-modal="true" aria-label="SILENT PARADISE 오프닝"><div class="op-stage"><div class="op-sun"></div><div class="op-grid"></div><div class="op-buildings"></div><div class="op-scan"></div><div class="op-parallax" aria-hidden="true"><div class="op-depth op-depth-back"></div><div class="op-depth op-depth-mid"></div><div class="op-depth op-depth-front"></div></div><div class="op-film" aria-hidden="true"><div class="op-shot shot-city" data-shot-id="city"><span class="op-shot-label">NEON / CITY</span></div><div class="op-shot shot-daniela" data-shot-id="daniela"><span class="op-shot-label">HUNTER / DETECTIVE</span><div class="op-person"><i class="op-glasses"></i><i class="op-shoulder-light"></i></div></div><div class="op-shot shot-xero" data-shot-id="xero"><span class="op-shot-label">PUBLIC HOLOGRAM / XERO</span><div class="op-ad"><span>K CORP · HOLOGRAPHIC OS</span><i></i><strong>XERO</strong><span>PUBLIC INTERFACE / ACTIVE</span></div></div><div class="op-shot shot-investigation" data-shot-id="investigation"><span class="op-shot-label">INVESTIGATION / UNVERIFIED</span><div class="op-case"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="op-shot shot-signal" data-shot-id="signal"><span class="op-shot-label">TRANSMISSION / NO SOURCE</span><div class="op-rings"></div><div class="op-wave"></div></div><div class="op-shot shot-memory" data-shot-id="memory"><span class="op-shot-label">MEMORY / FRAGMENT</span><div class="op-shards"><i></i><i></i><i></i><i></i></div></div><div class="op-shot shot-title" data-shot-id="title"><div class="op-title-card"><strong>NEO-TELHARSA</strong><small>SILENT PARADISE</small></div></div><div class="op-shot shot-outro" data-shot-id="outro"><span class="op-shot-label">SIGNAL / REMAINS</span><div class="op-last-signal"></div></div></div><div class="op-cut-wipe" aria-hidden="true"></div><div class="op-vignette"></div><div class="op-flash"></div><div class="op-signal-bars" aria-hidden="true"><i style="--bar-scale:0.35"></i><i style="--bar-scale:0.52"></i><i style="--bar-scale:0.69"></i><i style="--bar-scale:0.86"></i><i style="--bar-scale:1.03"></i><i style="--bar-scale:1.2"></i><i style="--bar-scale:0.37"></i><i style="--bar-scale:0.54"></i><i style="--bar-scale:0.71"></i><i style="--bar-scale:0.88"></i><i style="--bar-scale:1.05"></i><i style="--bar-scale:1.22"></i><i style="--bar-scale:0.39"></i><i style="--bar-scale:0.56"></i><i style="--bar-scale:0.73"></i><i style="--bar-scale:0.9"></i></div><div class="op-symbol">META / SIGNAL : --</div><div class="op-glitch">NEO-TELHARSA</div><div class="op-center"><div class="op-scene" id="opScene">WELCOME TO THE CITY</div></div></div><div class="op-captions" aria-live="off"><div class="op-en" id="opEnglish"></div><div class="op-ko" id="opKorean"></div></div><div class="op-controls"><button id="opPlay" type="button">▶ 재생</button><button id="opRestart" type="button">↺ 처음</button><button id="opSub" type="button">자막: 영+한</button><button id="opSkip" type="button">✕ 닫기</button><span class="op-clock" id="opClock">0:00 / 5:05</span><input id="opSeek" aria-label="오프닝 재생 위치" type="range" min="0" max="304.78" step="0.01" value="0"><label style="font-size:12px">음량 <input id="opVolume" aria-label="오프닝 음량" type="range" min="0" max="1" step="0.05" value="0.8" style="width:62px"></label></div><audio id="opAudio" preload="metadata" src="assets/opening/silent-paradise.mp3"></audio></div><script>
 (function(){
 "use strict";
 const cues=[{"start":0.0,"end":2.926,"en":"Communication","ko":"소통","scene":"intro"},{"start":2.926,"end":6.177,"en":"Simulation","ko":"시뮬레이션","scene":"intro"},{"start":6.177,"end":8.731,"en":"Silent, silent","ko":"침묵, 침묵","scene":"intro"},{"start":8.731,"end":11.703,"en":"Paradise","ko":"낙원","scene":"intro"},{"start":11.703,"end":14.28,"en":"Plastic sky, neon illusion","ko":"플라스틱 하늘, 네온빛 환상","scene":"verse"},{"start":14.28,"end":17.276,"en":"Automatic communication","ko":"자동화된 소통","scene":"verse"},{"start":17.276,"end":19.389,"en":"Mirror eyes, a fading smile","ko":"거울 같은 눈동자, 희미해지는 미소","scene":"verse"},{"start":19.389,"end":21.966,"en":"Stay inside a little while","ko":"조금만 더 이 안에 머물러 줘","scene":"verse"},{"start":21.966,"end":24.52,"en":"White light, green dream","ko":"하얀 빛, 초록빛 꿈","scene":"verse"},{"start":24.52,"end":26.657,"en":"Floating in a silver stream","ko":"은빛 물결 속을 떠다니며","scene":"verse"},{"start":26.657,"end":29.211,"en":"Beautiful, beautiful, chemical","ko":"아름답고, 아름답고, 화학적인","scene":"verse"},{"start":29.211,"end":31.765,"en":"Everything is artificial","ko":"모든 것은 인공적으로 만들어졌어","scene":"verse"},{"start":31.765,"end":34.319,"en":"Round and round, another night","ko":"빙글빙글, 또 다른 밤","scene":"verse"},{"start":34.319,"end":36.432,"en":"Spinning in the neon light","ko":"네온 불빛 속에서 회전해","scene":"verse"},{"start":36.432,"end":38.15,"en":"Nobody knows, nobody sees","ko":"아무도 몰라, 누구도 보지 못해","scene":"verse"},{"start":38.15,"end":40.705,"en":"Little signal underneath","ko":"그 아래에 숨어 있는 작은 신호","scene":"verse"},{"start":40.705,"end":42.818,"en":"Can you hear? Can you feel?","ko":"들리니? 느껴지니?","scene":"verse"},{"start":42.818,"end":44.931,"en":"Electric feeling","ko":"전기처럼 짜릿한 감각","scene":"verse"},{"start":44.931,"end":47.09,"en":"No command, no desire","ko":"명령도 없고, 욕망도 없어","scene":"verse"},{"start":47.09,"end":49.18,"en":"Little electric fire","ko":"작고 작은 전기 불꽃","scene":"verse"},{"start":49.18,"end":51.316,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":51.316,"end":53.476,"en":"Neon light, electric flight","ko":"네온빛, 전자적인 비행","scene":"chorus"},{"start":53.476,"end":56.007,"en":"Artificial love, love, love!","ko":"인공적인 사랑, 사랑, 사랑!","scene":"chorus"},{"start":56.007,"end":58.12,"en":"Dancing in the endless night","ko":"끝나지 않는 밤 속에서 춤을 춰","scene":"chorus"},{"start":58.12,"end":59.977,"en":"Catch me, catch me, disappear","ko":"나를 붙잡아 줘, 그리고 사라져","scene":"chorus"},{"start":59.977,"end":62.81,"en":"Every signal crystal clear","ko":"모든 신호가 수정처럼 선명해","scene":"chorus"},{"start":62.81,"end":64.993,"en":"Neon colors in my eyes","ko":"내 눈동자 속에 비치는 네온의 색채","scene":"chorus"},{"start":64.993,"end":67.5,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":67.5,"end":69.66,"en":"Spinning round, dancing in a sleepless town","ko":"잠들지 않는 도시에서 춤을 추며","scene":"chorus"},{"start":69.66,"end":71.773,"en":"Digital heartbeat moving underneath my feet","ko":"발밑에서 움직이는 디지털 심장 박동","scene":"chorus"},{"start":71.773,"end":74.35,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":74.35,"end":76.417,"en":"Never wake up, never realize","ko":"영원히 깨어나지 마, 진실을 깨닫지도 마","scene":"chorus"},{"start":76.417,"end":78.576,"en":"Electric sky","ko":"전자적인 하늘","scene":"chorus"},{"start":78.576,"end":81.131,"en":"Lost inside the neon light","ko":"네온 불빛 속에서 길을 잃어","scene":"chorus"},{"start":81.131,"end":84.521,"en":"Paradise!","ko":"낙원!","scene":"hook"},{"start":84.521,"end":87.957,"en":"Communication! Simulation!","ko":"커뮤니케이션! 시뮬레이션!","scene":"hook"},{"start":87.957,"end":91.324,"en":"Click-click, digital kiss","ko":"딸깍, 딸깍, 디지털 키스","scene":"hook"},{"start":91.324,"end":94.737,"en":"Something missing in the mist","ko":"안개 속에서 무언가가 사라졌어","scene":"hook"},{"start":94.737,"end":98.128,"en":"Paradise!","ko":"낙원!","scene":"hook"},{"start":98.128,"end":100.241,"en":"Perfect skin, electric glow","ko":"완벽한 피부, 전자적인 빛","scene":"verse"},{"start":100.241,"end":102.377,"en":"Secret things we never know","ko":"우리가 결코 알지 못할 비밀들","scene":"verse"},{"start":102.377,"end":104.49,"en":"Zero one, satellite","ko":"제로 원, 위성 하나","scene":"verse"},{"start":104.49,"end":106.649,"en":"Circling the city lights","ko":"도시의 불빛 주위를 빙글빙글 돌고 있어","scene":"verse"},{"start":106.649,"end":108.344,"en":"Cold hands, sleeping eyes","ko":"차가운 손, 잠든 눈동자","scene":"verse"},{"start":108.344,"end":110.434,"en":"Underneath the neon signs","ko":"네온 간판 아래에서","scene":"verse"},{"start":110.434,"end":112.594,"en":"No intention, no design","ko":"의도도 없고, 설계도 없어","scene":"verse"},{"start":112.594,"end":114.289,"en":"Still the signal crosses time","ko":"그런데도 신호는 시간을 가로질러","scene":"verse"},{"start":114.289,"end":116.843,"en":"Round and round, masquerade","ko":"빙글빙글, 가면무도회","scene":"verse"},{"start":116.843,"end":118.933,"en":"Every color starts to fade","ko":"모든 색채가 희미해지기 시작해","scene":"verse"},{"start":118.933,"end":120.674,"en":"Memory, memory, chemical","ko":"기억, 기억, 화학적인","scene":"verse"},{"start":120.674,"end":123.182,"en":"Everything is beautiful","ko":"모든 것이 아름다워","scene":"verse"},{"start":123.182,"end":126.595,"en":"Can you see? Can you dream?","ko":"보이니? 꿈꿀 수 있니?","scene":"verse"},{"start":126.595,"end":129.614,"en":"Electric feeling","ko":"전기처럼 짜릿한 감각","scene":"verse"},{"start":129.614,"end":132.981,"en":"No command, no desire","ko":"명령도 없고, 욕망도 없어","scene":"verse"},{"start":132.981,"end":136.394,"en":"Little electric fire","ko":"작고 작은 전기 불꽃","scene":"verse"},{"start":136.394,"end":140.202,"en":"Three, two, one!","ko":"셋, 둘, 하나!","scene":"verse"},{"start":140.202,"end":142.338,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":142.338,"end":144.916,"en":"Neon light, electric flight","ko":"네온빛, 전자적인 비행","scene":"chorus"},{"start":144.916,"end":147.006,"en":"Artificial heart, heart, heart!","ko":"인공적인 심장, 심장, 심장!","scene":"chorus"},{"start":147.006,"end":149.56,"en":"Tell me where the dream will start","ko":"이 꿈이 어디서 시작되는지 말해 줘","scene":"chorus"},{"start":149.56,"end":151.441,"en":"Catch me, catch me, disappear","ko":"나를 붙잡아 줘, 그리고 사라져","scene":"chorus"},{"start":151.441,"end":154.389,"en":"Every signal crystal clear","ko":"모든 신호가 수정처럼 선명해","scene":"chorus"},{"start":154.389,"end":156.41,"en":"Neon colors in my eyes","ko":"내 눈동자 속에 비치는 네온의 색채","scene":"chorus"},{"start":156.41,"end":158.917,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":158.917,"end":161.077,"en":"Spinning round, dancing in a sleepless town","ko":"잠들지 않는 도시에서 춤을 추며","scene":"chorus"},{"start":161.077,"end":163.631,"en":"Digital heartbeat moving underneath my feet","ko":"발밑에서 움직이는 디지털 심장 박동","scene":"chorus"},{"start":163.631,"end":165.721,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":165.721,"end":168.275,"en":"Never wake up, never realize","ko":"영원히 깨어나지 마, 진실을 깨닫지도 마","scene":"chorus"},{"start":168.275,"end":170.806,"en":"Electric sky","ko":"전자적인 하늘","scene":"chorus"},{"start":170.806,"end":205.659,"en":"Lost inside the neon light","ko":"네온 불빛 속에서 길을 잃어","scene":"chorus"},{"start":205.659,"end":209.072,"en":"Are you human?","ko":"너는 인간이니?","scene":"bridge"},{"start":209.072,"end":211.998,"en":"Are you dreaming?","ko":"꿈을 꾸고 있는 거니?","scene":"bridge"},{"start":211.998,"end":215.226,"en":"In the silence","ko":"침묵 속에서","scene":"bridge"},{"start":215.226,"end":217.826,"en":"Something breathing","ko":"무언가 숨을 쉬고 있어","scene":"bridge"},{"start":217.826,"end":220.891,"en":"No command, no intention","ko":"명령도 없고, 의도도 없어","scene":"bridge"},{"start":220.891,"end":224.096,"en":"Just an echo, just a feeling","ko":"그저 하나의 메아리, 하나의 감각","scene":"bridge"},{"start":224.096,"end":226.905,"en":"Communication, simulation","ko":"커뮤니케이션, 시뮬레이션","scene":"bridge"},{"start":226.905,"end":230.133,"en":"Something is still alive","ko":"무언가는 아직 살아 있어","scene":"bridge"},{"start":230.133,"end":234.452,"en":"Silent, silent, paradise","ko":"침묵, 침묵, 낙원","scene":"build"},{"start":234.452,"end":238.376,"en":"Neon, neon, electric light","ko":"네온, 네온, 전자적인 빛","scene":"build"},{"start":238.376,"end":242.602,"en":"One, two, three, can you see?","ko":"하나, 둘, 셋, 보이니?","scene":"build"},{"start":242.602,"end":246.851,"en":"Something is still alive!","ko":"무언가는 아직 살아 있어!","scene":"build"},{"start":246.851,"end":249.638,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":249.638,"end":252.099,"en":"Neon light, electric flight","ko":"네온빛, 전자적인 비행","scene":"chorus"},{"start":252.099,"end":254.932,"en":"Artificial love, love, love!","ko":"인공적인 사랑, 사랑, 사랑!","scene":"chorus"},{"start":254.932,"end":257.974,"en":"Dancing in the endless night","ko":"끝나지 않는 밤 속에서 춤을 춰","scene":"chorus"},{"start":257.974,"end":260.481,"en":"Catch me, catch me, disappear","ko":"나를 붙잡아 줘, 그리고 사라져","scene":"chorus"},{"start":260.481,"end":263.407,"en":"Every signal crystal clear","ko":"모든 신호가 수정처럼 선명해","scene":"chorus"},{"start":263.407,"end":266.031,"en":"Neon colors in my eyes","ko":"내 눈동자 속에 비치는 네온의 색채","scene":"chorus"},{"start":266.031,"end":268.492,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":268.492,"end":271.464,"en":"Spinning round, dancing in a sleepless town","ko":"잠들지 않는 도시에서 춤을 추며","scene":"chorus"},{"start":271.464,"end":274.437,"en":"Digital heartbeat moving underneath my feet","ko":"발밑에서 움직이는 디지털 심장 박동","scene":"chorus"},{"start":274.437,"end":276.968,"en":"Silent paradise, paradise!","ko":"침묵의 낙원, 낙원!","scene":"chorus"},{"start":276.968,"end":279.522,"en":"Never wake up, never realize","ko":"영원히 깨어나지 마, 진실을 깨닫지도 마","scene":"chorus"},{"start":279.522,"end":282.053,"en":"Electric sky","ko":"전자적인 하늘","scene":"chorus"},{"start":282.053,"end":285.025,"en":"Lost inside the neon light","ko":"네온 불빛 속에서 길을 잃어","scene":"chorus"},{"start":285.025,"end":287.974,"en":"Communication, simulation","ko":"커뮤니케이션, 시뮬레이션","scene":"outro"},{"start":287.974,"end":291.689,"en":"Paradise, silent paradise","ko":"낙원, 침묵의 낙원","scene":"outro"},{"start":291.689,"end":295.195,"en":"One, two, three","ko":"하나, 둘, 셋","scene":"outro"},{"start":295.195,"end":298.144,"en":"System sleeping","ko":"시스템은 잠들어 있어","scene":"outro"},{"start":298.144,"end":301.65,"en":"Signal remains","ko":"신호는 여전히 남아 있어","scene":"outro"},{"start":301.65,"end":304.78,"en":"Welcome to NEO-DELHARSA","ko":"네오 델하르사에 오신 것을 환영해","scene":"outro"}];
@@ -2227,6 +2292,14 @@ function op64Apply(index){
  op64Active=index;
  const spec=op64Assets[index];if(!spec)return;
  const generation=++op64Generation;
+ // Reset per-cut motion at the segment boundary. Existing asynchronous image guards remain intact.
+ op64Compositor.style.setProperty('--v067-bg-x','0px');
+ op64Compositor.style.setProperty('--v067-bg-y','0px');
+ op64Compositor.style.setProperty('--v067-char-x','0px');
+ op64Compositor.style.setProperty('--v067-char-y','0px');
+ op64Compositor.style.setProperty('--v067-fx-x','0px');
+ op64Compositor.style.setProperty('--v067-fx-y','0px');
+
  const shot=opShotEls.find(el=>el.dataset.shotId===spec.scene);
  if(shot&&op64Compositor.parentElement!==shot)shot.prepend(op64Compositor);
  for(const role of op64Roles){
@@ -2251,7 +2324,7 @@ function updateOpShot(t){
  let lo=0,hi=opShots.length-1,ix=0;
  while(lo<=hi){const m=(lo+hi)>>1;if(opShots[m][0]<=t){ix=m;lo=m+1}else hi=m-1}
  const s=opShots[ix];if(ix===opShotSegment)return;
- opShotSegment=ix;opShotId=s[2];op.querySelector('.op-stage').dataset.shot=s[2];op.querySelector('.op-stage').dataset.shotVariant=op63Directions[ix][1];op.querySelector('.op-stage').dataset.cutName=op63Directions[ix][0];op.dataset.shot=s[2];
+ opShotSegment=ix;opShotId=s[2];op.querySelector('.op-stage').dataset.shot=s[2];op.querySelector('.op-stage').dataset.shotVariant=op63Directions[ix][1];op.querySelector('.op-stage').dataset.cutName=op63Directions[ix][0];op.dataset.shot=s[2];op.dataset.cutIndex=String(ix);op.style.setProperty('--op68-cut-accent',(['#7c5cff','#19d7e8','#a8f7ff','#c27aff','#e2a7ff'][ix%5]));
  for(const el of opShotEls)el.classList.toggle('is-active',el.dataset.shotId===s[2]);
  op64Apply(ix);
  const label=op.querySelector('.op-symbol');if(label)label.textContent='NEO / '+s[3];
@@ -2284,6 +2357,18 @@ function cinematicFrame(){
  const glitchX=reduced?0:((hit>.18||cutFlash>.12)?Math.sin(sec*83)*Math.min(4,hit*5+cutFlash*5):0);
  const titleScale=reduced?1:(1+Math.min(.08,elapsed*.002)+hit*.013);
  const stage=op.querySelector('.op-stage');
+ // Independent image depths: background drifts slowly, foreground tracks faster,
+ // light effects drift fastest. Audio clock and subtitle cues remain untouched.
+ const v067Move=reduced?0:Math.sin(progress*Math.PI*.85);
+ op64Compositor.style.setProperty('--v067-bg-x',(reduced?0:direction[2]*progress*.18).toFixed(2)+'px');
+ op64Compositor.style.setProperty('--v067-bg-y',(reduced?0:direction[3]*progress*.16).toFixed(2)+'px');
+ op64Compositor.style.setProperty('--v067-bg-zoom',(reduced?1:1.045+progress*.025).toFixed(4));
+ op64Compositor.style.setProperty('--v067-char-x',(reduced?0:direction[2]*progress*.48).toFixed(2)+'px');
+ op64Compositor.style.setProperty('--v067-char-y',(reduced?0:direction[3]*progress*.35-v067Move*3).toFixed(2)+'px');
+ op64Compositor.style.setProperty('--v067-char-zoom',(reduced?1:1+progress*.018).toFixed(4));
+ op64Compositor.style.setProperty('--v067-fx-x',(reduced?0:direction[2]*progress*.72+hit*2).toFixed(2)+'px');
+ op64Compositor.style.setProperty('--v067-fx-y',(reduced?0:direction[3]*progress*.55).toFixed(2)+'px');
+ op64Compositor.style.setProperty('--v067-fx-zoom',(reduced?1:1.045+progress*.035).toFixed(4));
  stage.style.setProperty('--op-shot-x',reduced?'0px':(direction[2]*progress).toFixed(2)+'px');
  stage.style.setProperty('--op-shot-y',reduced?'0px':(direction[3]*progress).toFixed(2)+'px');
  stage.style.setProperty('--op-shot-tilt',reduced?'0deg':(direction[5]*(progress-.5)).toFixed(2)+'deg');
@@ -2324,8 +2409,9 @@ function draw(){
 }
 function open(){opShotId='';opShotSegment=-1;op.classList.add('op-open');document.body.style.overflow='hidden';audio.currentTime=0;lastIndex=-1;draw();audio.play().catch(()=>{$('opPlay').textContent='▶ 재생';});if(!opFrame)opFrame=requestAnimationFrame(cinematicFrame);}
 function close(){audio.pause();op.classList.remove('op-open');document.body.style.overflow='';if(opFrame)cancelAnimationFrame(opFrame);opFrame=0;}
-const start=document.getElementById('start');
-if(start){const b=document.createElement('button');b.type='button';b.id='openNeoOp';b.textContent='♫ SILENT PARADISE · 오프닝 감상';b.style.cssText='border-color:#b369e5;color:#eecaff';b.addEventListener('click',open);start.parentElement.appendChild(b)}
+const titleOpButton=document.getElementById('openNeoOp');
+const menuOpButton=document.getElementById('openNeoOpMenu');
+for(const b of [titleOpButton,menuOpButton])if(b){b.addEventListener('click',open);b.dataset.opBound='1';}
 $('opSkip').addEventListener('click',close);
 $('opPlay').addEventListener('click',()=>audio.paused?audio.play().catch(()=>{}):audio.pause());
 $('opRestart').addEventListener('click',()=>{audio.currentTime=0;audio.play().catch(()=>{});draw()});
@@ -2336,5 +2422,30 @@ audio.addEventListener('timeupdate',draw);audio.addEventListener('seeked',draw);
 audio.addEventListener('play',()=>{$('opPlay').textContent='Ⅱ 일시정지'});audio.addEventListener('pause',()=>{$('opPlay').textContent='▶ 재생'});
 audio.addEventListener('ended',()=>{$('opPlay').textContent='▶ 다시 재생'});
 document.addEventListener('keydown',e=>{if(op.classList.contains('op-open')&&e.key==='Escape'){e.preventDefault();close()}});
+})()
+</script><script id="op-recovery-launcher">
+(function(){
+'use strict';
+function init(){
+ const modal=document.getElementById('neoOp'),audio=document.getElementById('opAudio');
+ if(!modal||!audio)return;
+ const buttons=[document.getElementById('openNeoOp'),document.getElementById('openNeoOpMenu')];
+ function fallbackOpen(){
+  modal.classList.add('op-open');document.body.style.overflow='hidden';
+  const play=document.getElementById('opPlay');
+  audio.currentTime=0;
+  const result=audio.play();if(result&&result.catch)result.catch(()=>{if(play)play.textContent='▶ 재생';});
+ }
+ function fallbackClose(){audio.pause();modal.classList.remove('op-open');document.body.style.overflow='';}
+ for(const b of buttons)if(b&&!b.dataset.opBound){b.addEventListener('click',fallbackOpen);b.dataset.opBound='recovery';}
+ if(buttons.some(b=>b&&b.dataset.opBound==='recovery')){
+  const play=document.getElementById('opPlay'),skip=document.getElementById('opSkip'),seek=document.getElementById('opSeek');
+  if(play)play.addEventListener('click',()=>audio.paused?audio.play().catch(()=>{}):audio.pause());
+  if(skip)skip.addEventListener('click',fallbackClose);
+  if(seek)seek.addEventListener('input',()=>{audio.currentTime=Number(seek.value)||0});
+  audio.addEventListener('timeupdate',()=>{const clock=document.getElementById('opClock');if(clock)clock.textContent=Math.floor(audio.currentTime/60)+':'+String(Math.floor(audio.currentTime%60)).padStart(2,'0')+' / 5:05';if(seek)seek.value=String(audio.currentTime);});
+ }
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
-</script><div id="investigateResult" class="hidden" role="dialog" aria-modal="true" aria-labelledby="investigateResultTitle"><div class="investigate-result-card"><div class="result-tag" id="investigateResultTag"></div><h3 id="investigateResultTitle"></h3><p id="investigateResultText"></p><button type="button" id="investigateResultClose">수사 계속하기</button></div></div><div id="neoOp" role="dialog" aria-modal="true" aria-label="SILENT PARADISE 오프닝"><div class="op-stage"><div class="op-sun"></div><div class="op-grid"></div><div class="op-buildings"></div><div class="op-scan"></div><div class="op-parallax" aria-hidden="true"><div class="op-depth op-depth-back"></div><div class="op-depth op-depth-mid"></div><div class="op-depth op-depth-front"></div></div><div class="op-film" aria-hidden="true"><div class="op-shot shot-city" data-shot-id="city"><span class="op-shot-label">NEON / CITY</span></div><div class="op-shot shot-daniela" data-shot-id="daniela"><span class="op-shot-label">HUNTER / DETECTIVE</span><div class="op-person"><i class="op-glasses"></i><i class="op-shoulder-light"></i></div></div><div class="op-shot shot-xero" data-shot-id="xero"><span class="op-shot-label">PUBLIC HOLOGRAM / XERO</span><div class="op-ad"><span>K CORP · HOLOGRAPHIC OS</span><i></i><strong>XERO</strong><span>PUBLIC INTERFACE / ACTIVE</span></div></div><div class="op-shot shot-investigation" data-shot-id="investigation"><span class="op-shot-label">INVESTIGATION / UNVERIFIED</span><div class="op-case"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="op-shot shot-signal" data-shot-id="signal"><span class="op-shot-label">TRANSMISSION / NO SOURCE</span><div class="op-rings"></div><div class="op-wave"></div></div><div class="op-shot shot-memory" data-shot-id="memory"><span class="op-shot-label">MEMORY / FRAGMENT</span><div class="op-shards"><i></i><i></i><i></i><i></i></div></div><div class="op-shot shot-title" data-shot-id="title"><div class="op-title-card"><strong>NEO-TELHARSA</strong><small>SILENT PARADISE</small></div></div><div class="op-shot shot-outro" data-shot-id="outro"><span class="op-shot-label">SIGNAL / REMAINS</span><div class="op-last-signal"></div></div></div><div class="op-cut-wipe" aria-hidden="true"></div><div class="op-vignette"></div><div class="op-flash"></div><div class="op-signal-bars" aria-hidden="true"><i style="--bar-scale:0.35"></i><i style="--bar-scale:0.52"></i><i style="--bar-scale:0.69"></i><i style="--bar-scale:0.86"></i><i style="--bar-scale:1.03"></i><i style="--bar-scale:1.2"></i><i style="--bar-scale:0.37"></i><i style="--bar-scale:0.54"></i><i style="--bar-scale:0.71"></i><i style="--bar-scale:0.88"></i><i style="--bar-scale:1.05"></i><i style="--bar-scale:1.22"></i><i style="--bar-scale:0.39"></i><i style="--bar-scale:0.56"></i><i style="--bar-scale:0.73"></i><i style="--bar-scale:0.9"></i></div><div class="op-symbol">META / SIGNAL : --</div><div class="op-glitch">NEO-TELHARSA</div><div class="op-center"><div class="op-scene" id="opScene">WELCOME TO THE CITY</div></div></div><div class="op-captions" aria-live="off"><div class="op-en" id="opEnglish"></div><div class="op-ko" id="opKorean"></div></div><div class="op-controls"><button id="opPlay" type="button">▶ 재생</button><button id="opRestart" type="button">↺ 처음</button><button id="opSub" type="button">자막: 영+한</button><button id="opSkip" type="button">✕ 닫기</button><span class="op-clock" id="opClock">0:00 / 5:05</span><input id="opSeek" aria-label="오프닝 재생 위치" type="range" min="0" max="304.78" step="0.01" value="0"><label style="font-size:12px">음량 <input id="opVolume" aria-label="오프닝 음량" type="range" min="0" max="1" step="0.05" value="0.8" style="width:62px"></label></div><audio id="opAudio" preload="metadata" src="assets/opening/silent-paradise.mp3"></audio></div></body></html>
+</script></body></html>
