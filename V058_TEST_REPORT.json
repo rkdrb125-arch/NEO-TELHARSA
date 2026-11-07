@@ -1,0 +1,10 @@
+{
+  "version": "0.58",
+  "changes": "optional scene hotspots, investigation result overlay, item/log persistence",
+  "save_schema_changed": false,
+  "browser_mobile_test": "not performed",
+  "checks": [
+    "node --check",
+    "zipfile.testzip"
+  ]
+}

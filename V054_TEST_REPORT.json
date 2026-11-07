@@ -1,0 +1,9 @@
+{
+  "source": "neo_telharsa_v053_cinematic_novel_github.zip",
+  "javascript_syntax": "PASS",
+  "scene_background_mapping": "8 optional WEBP keys",
+  "save_schema": "unchanged",
+  "browser": "BLOCKED: Chromium Playwright navigation net::ERR_BLOCKED_BY_ADMINISTRATOR for both file:// and localhost HTTP",
+  "mobile_touch_e2e": "NOT VERIFIED (browser navigation blocked)",
+  "zip_integrity": "PASS"
+}

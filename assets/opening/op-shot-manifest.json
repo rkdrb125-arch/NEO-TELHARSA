@@ -1,0 +1,366 @@
+{
+  "version": "0.64",
+  "notes": "Optional image files. Missing files automatically fall back to v0.63 CSS scenes. Keep transparent PNG/WebP for characters/overlays. Paths are relative to index.html.",
+  "shots": [
+    {
+      "index": 0,
+      "start": 0.0,
+      "scene": "signal",
+      "label": "INITIALIZING",
+      "background": "assets/opening/shots/shot-01-background.webp",
+      "character": "assets/opening/shots/shot-01-character.png",
+      "overlay": "assets/opening/shots/shot-01-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 1,
+      "start": 11.7,
+      "scene": "city",
+      "label": "NEON CITY",
+      "background": "assets/opening/shots/shot-02-background.webp",
+      "character": "assets/opening/shots/shot-02-character.png",
+      "overlay": "assets/opening/shots/shot-02-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 2,
+      "start": 21.97,
+      "scene": "xero",
+      "label": "PUBLIC HOLOGRAM",
+      "background": "assets/opening/shots/shot-03-background.webp",
+      "character": "assets/opening/shots/shot-03-character.png",
+      "overlay": "assets/opening/shots/shot-03-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 3,
+      "start": 31.77,
+      "scene": "daniela",
+      "label": "DANIELA LEONHARDT",
+      "background": "assets/opening/shots/shot-04-background.webp",
+      "character": "assets/opening/shots/shot-04-character.png",
+      "overlay": "assets/opening/shots/shot-04-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 4,
+      "start": 40.7,
+      "scene": "investigation",
+      "label": "CASE OPEN",
+      "background": "assets/opening/shots/shot-05-background.webp",
+      "character": "assets/opening/shots/shot-05-character.png",
+      "overlay": "assets/opening/shots/shot-05-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 5,
+      "start": 49.18,
+      "scene": "title",
+      "label": "SILENT PARADISE",
+      "background": "assets/opening/shots/shot-06-background.webp",
+      "character": "assets/opening/shots/shot-06-character.png",
+      "overlay": "assets/opening/shots/shot-06-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 6,
+      "start": 68.5,
+      "scene": "city",
+      "label": "SLEEPLESS CITY",
+      "background": "assets/opening/shots/shot-07-background.webp",
+      "character": "assets/opening/shots/shot-07-character.png",
+      "overlay": "assets/opening/shots/shot-07-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 7,
+      "start": 82.2,
+      "scene": "signal",
+      "label": "COMMUNICATION",
+      "background": "assets/opening/shots/shot-08-background.webp",
+      "character": "assets/opening/shots/shot-08-character.png",
+      "overlay": "assets/opening/shots/shot-08-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 8,
+      "start": 98.5,
+      "scene": "xero",
+      "label": "PUBLIC SYSTEM",
+      "background": "assets/opening/shots/shot-09-background.webp",
+      "character": "assets/opening/shots/shot-09-character.png",
+      "overlay": "assets/opening/shots/shot-09-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 9,
+      "start": 112.7,
+      "scene": "investigation",
+      "label": "CASE FILES",
+      "background": "assets/opening/shots/shot-10-background.webp",
+      "character": "assets/opening/shots/shot-10-character.png",
+      "overlay": "assets/opening/shots/shot-10-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 10,
+      "start": 130.5,
+      "scene": "daniela",
+      "label": "HUNTER",
+      "background": "assets/opening/shots/shot-11-background.webp",
+      "character": "assets/opening/shots/shot-11-character.png",
+      "overlay": "assets/opening/shots/shot-11-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 11,
+      "start": 146.8,
+      "scene": "title",
+      "label": "SILENT PARADISE",
+      "background": "assets/opening/shots/shot-12-background.webp",
+      "character": "assets/opening/shots/shot-12-character.png",
+      "overlay": "assets/opening/shots/shot-12-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 12,
+      "start": 172.5,
+      "scene": "city",
+      "label": "NEON / MOTION",
+      "background": "assets/opening/shots/shot-13-background.webp",
+      "character": "assets/opening/shots/shot-13-character.png",
+      "overlay": "assets/opening/shots/shot-13-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 13,
+      "start": 193.5,
+      "scene": "signal",
+      "label": "TRANSMISSION",
+      "background": "assets/opening/shots/shot-14-background.webp",
+      "character": "assets/opening/shots/shot-14-character.png",
+      "overlay": "assets/opening/shots/shot-14-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 14,
+      "start": 210.0,
+      "scene": "memory",
+      "label": "FRAGMENTS",
+      "background": "assets/opening/shots/shot-15-background.webp",
+      "character": "assets/opening/shots/shot-15-character.png",
+      "overlay": "assets/opening/shots/shot-15-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 15,
+      "start": 229.0,
+      "scene": "signal",
+      "label": "SIGNAL DETECTED",
+      "background": "assets/opening/shots/shot-16-background.webp",
+      "character": "assets/opening/shots/shot-16-character.png",
+      "overlay": "assets/opening/shots/shot-16-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 16,
+      "start": 246.85,
+      "scene": "title",
+      "label": "SILENT PARADISE",
+      "background": "assets/opening/shots/shot-17-background.webp",
+      "character": "assets/opening/shots/shot-17-character.png",
+      "overlay": "assets/opening/shots/shot-17-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 17,
+      "start": 268.5,
+      "scene": "city",
+      "label": "AFTERIMAGE",
+      "background": "assets/opening/shots/shot-18-background.webp",
+      "character": "assets/opening/shots/shot-18-character.png",
+      "overlay": "assets/opening/shots/shot-18-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 18,
+      "start": 285.03,
+      "scene": "memory",
+      "label": "MEMORY / ECHO",
+      "background": "assets/opening/shots/shot-19-background.webp",
+      "character": "assets/opening/shots/shot-19-character.png",
+      "overlay": "assets/opening/shots/shot-19-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    },
+    {
+      "index": 19,
+      "start": 295.2,
+      "scene": "outro",
+      "label": "SIGNAL REMAINS",
+      "background": "assets/opening/shots/shot-20-background.webp",
+      "character": "assets/opening/shots/shot-20-character.png",
+      "overlay": "assets/opening/shots/shot-20-overlay.png",
+      "focus": {
+        "x": 50,
+        "y": 50
+      },
+      "characterPosition": {
+        "x": 50,
+        "y": 50,
+        "scale": 1
+      }
+    }
+  ]
+}

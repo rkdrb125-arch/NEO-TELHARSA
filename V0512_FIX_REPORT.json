@@ -1,0 +1,10 @@
+{
+  "base": "v0.51.1",
+  "changes": [
+    "mobile actor stage height and foreground visibility",
+    "two-tap choice confirmation",
+    "scroll to choices on story tap",
+    "touch hint update"
+  ],
+  "save_schema_changed": false
+}

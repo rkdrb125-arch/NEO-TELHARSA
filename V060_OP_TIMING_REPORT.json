@@ -1,0 +1,8 @@
+{
+  "audioDuration": 304.779875,
+  "subtitleCues": 102,
+  "timingMethod": "audio onset assisted within 0.48s of prior approximate cue starts; NOT vocal-verified",
+  "audioEnvelopeResolutionSeconds": 0.1,
+  "envelopeFrames": 3049,
+  "originalAudioSHA256": "41fbb6006e1b86468426f52b053a7783311dbcd87ca08cfb511cdc0ac1354a09"
+}

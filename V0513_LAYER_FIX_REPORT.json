@@ -1,0 +1,11 @@
+{
+  "version": "0.51.3",
+  "base": "0.51.2",
+  "changes": [
+    "sky and actors now share one compositing scene-visual container",
+    "skyline z-index 0, actor z-index 2/3, dialogue z-index 5",
+    "mobile portrait and landscape responsive visual height"
+  ],
+  "save_schema_changed": false,
+  "canonical_story_changed": false
+}

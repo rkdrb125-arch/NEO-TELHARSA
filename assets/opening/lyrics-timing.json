@@ -1,0 +1,720 @@
+{
+  "audioDuration": 304.779875,
+  "syncMethod": "onset-assisted correction of section estimates; not verified vocal/word alignment",
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 2.926,
+      "en": "Communication",
+      "ko": "소통",
+      "scene": "intro"
+    },
+    {
+      "start": 2.926,
+      "end": 6.177,
+      "en": "Simulation",
+      "ko": "시뮬레이션",
+      "scene": "intro"
+    },
+    {
+      "start": 6.177,
+      "end": 8.731,
+      "en": "Silent, silent",
+      "ko": "침묵, 침묵",
+      "scene": "intro"
+    },
+    {
+      "start": 8.731,
+      "end": 11.703,
+      "en": "Paradise",
+      "ko": "낙원",
+      "scene": "intro"
+    },
+    {
+      "start": 11.703,
+      "end": 14.28,
+      "en": "Plastic sky, neon illusion",
+      "ko": "플라스틱 하늘, 네온빛 환상",
+      "scene": "verse"
+    },
+    {
+      "start": 14.28,
+      "end": 17.276,
+      "en": "Automatic communication",
+      "ko": "자동화된 소통",
+      "scene": "verse"
+    },
+    {
+      "start": 17.276,
+      "end": 19.389,
+      "en": "Mirror eyes, a fading smile",
+      "ko": "거울 같은 눈동자, 희미해지는 미소",
+      "scene": "verse"
+    },
+    {
+      "start": 19.389,
+      "end": 21.966,
+      "en": "Stay inside a little while",
+      "ko": "조금만 더 이 안에 머물러 줘",
+      "scene": "verse"
+    },
+    {
+      "start": 21.966,
+      "end": 24.52,
+      "en": "White light, green dream",
+      "ko": "하얀 빛, 초록빛 꿈",
+      "scene": "verse"
+    },
+    {
+      "start": 24.52,
+      "end": 26.657,
+      "en": "Floating in a silver stream",
+      "ko": "은빛 물결 속을 떠다니며",
+      "scene": "verse"
+    },
+    {
+      "start": 26.657,
+      "end": 29.211,
+      "en": "Beautiful, beautiful, chemical",
+      "ko": "아름답고, 아름답고, 화학적인",
+      "scene": "verse"
+    },
+    {
+      "start": 29.211,
+      "end": 31.765,
+      "en": "Everything is artificial",
+      "ko": "모든 것은 인공적으로 만들어졌어",
+      "scene": "verse"
+    },
+    {
+      "start": 31.765,
+      "end": 34.319,
+      "en": "Round and round, another night",
+      "ko": "빙글빙글, 또 다른 밤",
+      "scene": "verse"
+    },
+    {
+      "start": 34.319,
+      "end": 36.432,
+      "en": "Spinning in the neon light",
+      "ko": "네온 불빛 속에서 회전해",
+      "scene": "verse"
+    },
+    {
+      "start": 36.432,
+      "end": 38.15,
+      "en": "Nobody knows, nobody sees",
+      "ko": "아무도 몰라, 누구도 보지 못해",
+      "scene": "verse"
+    },
+    {
+      "start": 38.15,
+      "end": 40.705,
+      "en": "Little signal underneath",
+      "ko": "그 아래에 숨어 있는 작은 신호",
+      "scene": "verse"
+    },
+    {
+      "start": 40.705,
+      "end": 42.818,
+      "en": "Can you hear? Can you feel?",
+      "ko": "들리니? 느껴지니?",
+      "scene": "verse"
+    },
+    {
+      "start": 42.818,
+      "end": 44.931,
+      "en": "Electric feeling",
+      "ko": "전기처럼 짜릿한 감각",
+      "scene": "verse"
+    },
+    {
+      "start": 44.931,
+      "end": 47.09,
+      "en": "No command, no desire",
+      "ko": "명령도 없고, 욕망도 없어",
+      "scene": "verse"
+    },
+    {
+      "start": 47.09,
+      "end": 49.18,
+      "en": "Little electric fire",
+      "ko": "작고 작은 전기 불꽃",
+      "scene": "verse"
+    },
+    {
+      "start": 49.18,
+      "end": 51.316,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 51.316,
+      "end": 53.476,
+      "en": "Neon light, electric flight",
+      "ko": "네온빛, 전자적인 비행",
+      "scene": "chorus"
+    },
+    {
+      "start": 53.476,
+      "end": 56.007,
+      "en": "Artificial love, love, love!",
+      "ko": "인공적인 사랑, 사랑, 사랑!",
+      "scene": "chorus"
+    },
+    {
+      "start": 56.007,
+      "end": 58.12,
+      "en": "Dancing in the endless night",
+      "ko": "끝나지 않는 밤 속에서 춤을 춰",
+      "scene": "chorus"
+    },
+    {
+      "start": 58.12,
+      "end": 59.977,
+      "en": "Catch me, catch me, disappear",
+      "ko": "나를 붙잡아 줘, 그리고 사라져",
+      "scene": "chorus"
+    },
+    {
+      "start": 59.977,
+      "end": 62.81,
+      "en": "Every signal crystal clear",
+      "ko": "모든 신호가 수정처럼 선명해",
+      "scene": "chorus"
+    },
+    {
+      "start": 62.81,
+      "end": 64.993,
+      "en": "Neon colors in my eyes",
+      "ko": "내 눈동자 속에 비치는 네온의 색채",
+      "scene": "chorus"
+    },
+    {
+      "start": 64.993,
+      "end": 67.5,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 67.5,
+      "end": 69.66,
+      "en": "Spinning round, dancing in a sleepless town",
+      "ko": "잠들지 않는 도시에서 춤을 추며",
+      "scene": "chorus"
+    },
+    {
+      "start": 69.66,
+      "end": 71.773,
+      "en": "Digital heartbeat moving underneath my feet",
+      "ko": "발밑에서 움직이는 디지털 심장 박동",
+      "scene": "chorus"
+    },
+    {
+      "start": 71.773,
+      "end": 74.35,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 74.35,
+      "end": 76.417,
+      "en": "Never wake up, never realize",
+      "ko": "영원히 깨어나지 마, 진실을 깨닫지도 마",
+      "scene": "chorus"
+    },
+    {
+      "start": 76.417,
+      "end": 78.576,
+      "en": "Electric sky",
+      "ko": "전자적인 하늘",
+      "scene": "chorus"
+    },
+    {
+      "start": 78.576,
+      "end": 81.131,
+      "en": "Lost inside the neon light",
+      "ko": "네온 불빛 속에서 길을 잃어",
+      "scene": "chorus"
+    },
+    {
+      "start": 81.131,
+      "end": 84.521,
+      "en": "Paradise!",
+      "ko": "낙원!",
+      "scene": "hook"
+    },
+    {
+      "start": 84.521,
+      "end": 87.957,
+      "en": "Communication! Simulation!",
+      "ko": "커뮤니케이션! 시뮬레이션!",
+      "scene": "hook"
+    },
+    {
+      "start": 87.957,
+      "end": 91.324,
+      "en": "Click-click, digital kiss",
+      "ko": "딸깍, 딸깍, 디지털 키스",
+      "scene": "hook"
+    },
+    {
+      "start": 91.324,
+      "end": 94.737,
+      "en": "Something missing in the mist",
+      "ko": "안개 속에서 무언가가 사라졌어",
+      "scene": "hook"
+    },
+    {
+      "start": 94.737,
+      "end": 98.128,
+      "en": "Paradise!",
+      "ko": "낙원!",
+      "scene": "hook"
+    },
+    {
+      "start": 98.128,
+      "end": 100.241,
+      "en": "Perfect skin, electric glow",
+      "ko": "완벽한 피부, 전자적인 빛",
+      "scene": "verse"
+    },
+    {
+      "start": 100.241,
+      "end": 102.377,
+      "en": "Secret things we never know",
+      "ko": "우리가 결코 알지 못할 비밀들",
+      "scene": "verse"
+    },
+    {
+      "start": 102.377,
+      "end": 104.49,
+      "en": "Zero one, satellite",
+      "ko": "제로 원, 위성 하나",
+      "scene": "verse"
+    },
+    {
+      "start": 104.49,
+      "end": 106.649,
+      "en": "Circling the city lights",
+      "ko": "도시의 불빛 주위를 빙글빙글 돌고 있어",
+      "scene": "verse"
+    },
+    {
+      "start": 106.649,
+      "end": 108.344,
+      "en": "Cold hands, sleeping eyes",
+      "ko": "차가운 손, 잠든 눈동자",
+      "scene": "verse"
+    },
+    {
+      "start": 108.344,
+      "end": 110.434,
+      "en": "Underneath the neon signs",
+      "ko": "네온 간판 아래에서",
+      "scene": "verse"
+    },
+    {
+      "start": 110.434,
+      "end": 112.594,
+      "en": "No intention, no design",
+      "ko": "의도도 없고, 설계도 없어",
+      "scene": "verse"
+    },
+    {
+      "start": 112.594,
+      "end": 114.289,
+      "en": "Still the signal crosses time",
+      "ko": "그런데도 신호는 시간을 가로질러",
+      "scene": "verse"
+    },
+    {
+      "start": 114.289,
+      "end": 116.843,
+      "en": "Round and round, masquerade",
+      "ko": "빙글빙글, 가면무도회",
+      "scene": "verse"
+    },
+    {
+      "start": 116.843,
+      "end": 118.933,
+      "en": "Every color starts to fade",
+      "ko": "모든 색채가 희미해지기 시작해",
+      "scene": "verse"
+    },
+    {
+      "start": 118.933,
+      "end": 120.674,
+      "en": "Memory, memory, chemical",
+      "ko": "기억, 기억, 화학적인",
+      "scene": "verse"
+    },
+    {
+      "start": 120.674,
+      "end": 123.182,
+      "en": "Everything is beautiful",
+      "ko": "모든 것이 아름다워",
+      "scene": "verse"
+    },
+    {
+      "start": 123.182,
+      "end": 126.595,
+      "en": "Can you see? Can you dream?",
+      "ko": "보이니? 꿈꿀 수 있니?",
+      "scene": "verse"
+    },
+    {
+      "start": 126.595,
+      "end": 129.614,
+      "en": "Electric feeling",
+      "ko": "전기처럼 짜릿한 감각",
+      "scene": "verse"
+    },
+    {
+      "start": 129.614,
+      "end": 132.981,
+      "en": "No command, no desire",
+      "ko": "명령도 없고, 욕망도 없어",
+      "scene": "verse"
+    },
+    {
+      "start": 132.981,
+      "end": 136.394,
+      "en": "Little electric fire",
+      "ko": "작고 작은 전기 불꽃",
+      "scene": "verse"
+    },
+    {
+      "start": 136.394,
+      "end": 140.202,
+      "en": "Three, two, one!",
+      "ko": "셋, 둘, 하나!",
+      "scene": "verse"
+    },
+    {
+      "start": 140.202,
+      "end": 142.338,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 142.338,
+      "end": 144.916,
+      "en": "Neon light, electric flight",
+      "ko": "네온빛, 전자적인 비행",
+      "scene": "chorus"
+    },
+    {
+      "start": 144.916,
+      "end": 147.006,
+      "en": "Artificial heart, heart, heart!",
+      "ko": "인공적인 심장, 심장, 심장!",
+      "scene": "chorus"
+    },
+    {
+      "start": 147.006,
+      "end": 149.56,
+      "en": "Tell me where the dream will start",
+      "ko": "이 꿈이 어디서 시작되는지 말해 줘",
+      "scene": "chorus"
+    },
+    {
+      "start": 149.56,
+      "end": 151.441,
+      "en": "Catch me, catch me, disappear",
+      "ko": "나를 붙잡아 줘, 그리고 사라져",
+      "scene": "chorus"
+    },
+    {
+      "start": 151.441,
+      "end": 154.389,
+      "en": "Every signal crystal clear",
+      "ko": "모든 신호가 수정처럼 선명해",
+      "scene": "chorus"
+    },
+    {
+      "start": 154.389,
+      "end": 156.41,
+      "en": "Neon colors in my eyes",
+      "ko": "내 눈동자 속에 비치는 네온의 색채",
+      "scene": "chorus"
+    },
+    {
+      "start": 156.41,
+      "end": 158.917,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 158.917,
+      "end": 161.077,
+      "en": "Spinning round, dancing in a sleepless town",
+      "ko": "잠들지 않는 도시에서 춤을 추며",
+      "scene": "chorus"
+    },
+    {
+      "start": 161.077,
+      "end": 163.631,
+      "en": "Digital heartbeat moving underneath my feet",
+      "ko": "발밑에서 움직이는 디지털 심장 박동",
+      "scene": "chorus"
+    },
+    {
+      "start": 163.631,
+      "end": 165.721,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 165.721,
+      "end": 168.275,
+      "en": "Never wake up, never realize",
+      "ko": "영원히 깨어나지 마, 진실을 깨닫지도 마",
+      "scene": "chorus"
+    },
+    {
+      "start": 168.275,
+      "end": 170.806,
+      "en": "Electric sky",
+      "ko": "전자적인 하늘",
+      "scene": "chorus"
+    },
+    {
+      "start": 170.806,
+      "end": 205.659,
+      "en": "Lost inside the neon light",
+      "ko": "네온 불빛 속에서 길을 잃어",
+      "scene": "chorus"
+    },
+    {
+      "start": 205.659,
+      "end": 209.072,
+      "en": "Are you human?",
+      "ko": "너는 인간이니?",
+      "scene": "bridge"
+    },
+    {
+      "start": 209.072,
+      "end": 211.998,
+      "en": "Are you dreaming?",
+      "ko": "꿈을 꾸고 있는 거니?",
+      "scene": "bridge"
+    },
+    {
+      "start": 211.998,
+      "end": 215.226,
+      "en": "In the silence",
+      "ko": "침묵 속에서",
+      "scene": "bridge"
+    },
+    {
+      "start": 215.226,
+      "end": 217.826,
+      "en": "Something breathing",
+      "ko": "무언가 숨을 쉬고 있어",
+      "scene": "bridge"
+    },
+    {
+      "start": 217.826,
+      "end": 220.891,
+      "en": "No command, no intention",
+      "ko": "명령도 없고, 의도도 없어",
+      "scene": "bridge"
+    },
+    {
+      "start": 220.891,
+      "end": 224.096,
+      "en": "Just an echo, just a feeling",
+      "ko": "그저 하나의 메아리, 하나의 감각",
+      "scene": "bridge"
+    },
+    {
+      "start": 224.096,
+      "end": 226.905,
+      "en": "Communication, simulation",
+      "ko": "커뮤니케이션, 시뮬레이션",
+      "scene": "bridge"
+    },
+    {
+      "start": 226.905,
+      "end": 230.133,
+      "en": "Something is still alive",
+      "ko": "무언가는 아직 살아 있어",
+      "scene": "bridge"
+    },
+    {
+      "start": 230.133,
+      "end": 234.452,
+      "en": "Silent, silent, paradise",
+      "ko": "침묵, 침묵, 낙원",
+      "scene": "build"
+    },
+    {
+      "start": 234.452,
+      "end": 238.376,
+      "en": "Neon, neon, electric light",
+      "ko": "네온, 네온, 전자적인 빛",
+      "scene": "build"
+    },
+    {
+      "start": 238.376,
+      "end": 242.602,
+      "en": "One, two, three, can you see?",
+      "ko": "하나, 둘, 셋, 보이니?",
+      "scene": "build"
+    },
+    {
+      "start": 242.602,
+      "end": 246.851,
+      "en": "Something is still alive!",
+      "ko": "무언가는 아직 살아 있어!",
+      "scene": "build"
+    },
+    {
+      "start": 246.851,
+      "end": 249.638,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 249.638,
+      "end": 252.099,
+      "en": "Neon light, electric flight",
+      "ko": "네온빛, 전자적인 비행",
+      "scene": "chorus"
+    },
+    {
+      "start": 252.099,
+      "end": 254.932,
+      "en": "Artificial love, love, love!",
+      "ko": "인공적인 사랑, 사랑, 사랑!",
+      "scene": "chorus"
+    },
+    {
+      "start": 254.932,
+      "end": 257.974,
+      "en": "Dancing in the endless night",
+      "ko": "끝나지 않는 밤 속에서 춤을 춰",
+      "scene": "chorus"
+    },
+    {
+      "start": 257.974,
+      "end": 260.481,
+      "en": "Catch me, catch me, disappear",
+      "ko": "나를 붙잡아 줘, 그리고 사라져",
+      "scene": "chorus"
+    },
+    {
+      "start": 260.481,
+      "end": 263.407,
+      "en": "Every signal crystal clear",
+      "ko": "모든 신호가 수정처럼 선명해",
+      "scene": "chorus"
+    },
+    {
+      "start": 263.407,
+      "end": 266.031,
+      "en": "Neon colors in my eyes",
+      "ko": "내 눈동자 속에 비치는 네온의 색채",
+      "scene": "chorus"
+    },
+    {
+      "start": 266.031,
+      "end": 268.492,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 268.492,
+      "end": 271.464,
+      "en": "Spinning round, dancing in a sleepless town",
+      "ko": "잠들지 않는 도시에서 춤을 추며",
+      "scene": "chorus"
+    },
+    {
+      "start": 271.464,
+      "end": 274.437,
+      "en": "Digital heartbeat moving underneath my feet",
+      "ko": "발밑에서 움직이는 디지털 심장 박동",
+      "scene": "chorus"
+    },
+    {
+      "start": 274.437,
+      "end": 276.968,
+      "en": "Silent paradise, paradise!",
+      "ko": "침묵의 낙원, 낙원!",
+      "scene": "chorus"
+    },
+    {
+      "start": 276.968,
+      "end": 279.522,
+      "en": "Never wake up, never realize",
+      "ko": "영원히 깨어나지 마, 진실을 깨닫지도 마",
+      "scene": "chorus"
+    },
+    {
+      "start": 279.522,
+      "end": 282.053,
+      "en": "Electric sky",
+      "ko": "전자적인 하늘",
+      "scene": "chorus"
+    },
+    {
+      "start": 282.053,
+      "end": 285.025,
+      "en": "Lost inside the neon light",
+      "ko": "네온 불빛 속에서 길을 잃어",
+      "scene": "chorus"
+    },
+    {
+      "start": 285.025,
+      "end": 287.974,
+      "en": "Communication, simulation",
+      "ko": "커뮤니케이션, 시뮬레이션",
+      "scene": "outro"
+    },
+    {
+      "start": 287.974,
+      "end": 291.689,
+      "en": "Paradise, silent paradise",
+      "ko": "낙원, 침묵의 낙원",
+      "scene": "outro"
+    },
+    {
+      "start": 291.689,
+      "end": 295.195,
+      "en": "One, two, three",
+      "ko": "하나, 둘, 셋",
+      "scene": "outro"
+    },
+    {
+      "start": 295.195,
+      "end": 298.144,
+      "en": "System sleeping",
+      "ko": "시스템은 잠들어 있어",
+      "scene": "outro"
+    },
+    {
+      "start": 298.144,
+      "end": 301.65,
+      "en": "Signal remains",
+      "ko": "신호는 여전히 남아 있어",
+      "scene": "outro"
+    },
+    {
+      "start": 301.65,
+      "end": 304.78,
+      "en": "Welcome to NEO-DELHARSA",
+      "ko": "네오 델하르사에 오신 것을 환영해",
+      "scene": "outro"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "0.55",
+  "source": "v0.54",
+  "javascript_syntax": "passed node --check",
+  "zip_integrity": "passed",
+  "browser_mobile_test": "blocked by environment policy: ERR_BLOCKED_BY_ADMINISTRATOR on file://; not verified",
+  "changes": [
+    "mobile narrative pages",
+    "two-tap choice guarding",
+    "foreground/background z-index",
+    "EP3 background mapping"
+  ],
+  "save_schema": "unchanged"
+}
