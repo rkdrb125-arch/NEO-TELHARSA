@@ -1,0 +1,5 @@
+{
+  "issue": "Title overlay z-index 20 covered modal overlays z-index 5",
+  "fix": "Raise slots/preferences/controls/log modal z-index to 35; chapter overlay to 30",
+  "save_format_changed": false
+}

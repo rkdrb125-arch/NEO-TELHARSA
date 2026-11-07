@@ -117,3 +117,8 @@ v0.49: EP.3 〈왕서방 찾기〉 원작 로그 기반 플레이 장면 35개 �
 
 
 v0.50: EP.3 사건 보드 8개 단서/4개 대조, 다니엘라 중심 원작 연출 보강, 간결한 위험 표시와 수사 바로가기. 기존 저장 키/스키마와 ZIP 구성 유지. 혈청은 테오도어 소지, 반 카일리 행방 미확정.
+
+
+v0.51: EP.3 scene atmosphere by phase, extra original dialogue, mobile evidence list, sticky controls, evidence search; existing save keys and backup format unchanged. Browser regression results in V051_TEST_REPORT.json.
+
+[v0.51.1 HOTFIX] Fixed title screen covering save slots/preferences/help dialogs. No save keys or canon changed.

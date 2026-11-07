@@ -1,0 +1,19 @@
+{
+  "loaded": true,
+  "scene_count": 60,
+  "scene_links_valid": true,
+  "mobile_no_horizontal_overflow": true,
+  "storage_key": "neo_telharsa_v002",
+  "slot_helpers_present": true,
+  "chapter_hidden_initially": true,
+  "ep3_unlock_and_ui": true,
+  "evidence_search_visible": true,
+  "evidence_search_filters": true,
+  "mobile_board_no_overflow": true,
+  "storage_available": true,
+  "save_restore": true,
+  "slot_isolation": true,
+  "errors": [],
+  "test_environment": "Chromium headless via Playwright set_content; localStorage simulated in-memory because URL navigation blocked by administrator",
+  "real_origin_persistence_test": "not verified"
+}
